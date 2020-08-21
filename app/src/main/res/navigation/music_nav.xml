@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/music_nav"
+    app:startDestination="@id/fragmentListMusic">
+
+    <fragment
+        android:id="@+id/fragmentListMusic"
+        android:name="com.example.enigma_music.screens.fragmentListMusic"
+        android:label="fragment_list_music"
+        tools:layout="@layout/fragment_list_music" >
+        <action
+            android:id="@+id/action_fragmentListMusic_to_fragmentFormMusic"
+            app:destination="@id/fragmentFormMusic" />
+        <action
+            android:id="@+id/action_fragmentListMusic_to_fragmentListSongAlbum"
+            app:destination="@id/fragmentListSongAlbum" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFormMusic"
+        android:name="com.example.enigma_music.screens.FragmentFormMusic"
+        android:label="fragment_form_music"
+        tools:layout="@layout/fragment_form_music" >
+        <action
+            android:id="@+id/action_fragmentFormMusic_to_fragmentListMusic"
+            app:destination="@id/fragmentListMusic" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentListSongAlbum"
+        android:name="com.example.enigma_music.screens.FragmentListSongAlbum"
+        android:label="fragment_list_song_album"
+        tools:layout="@layout/fragment_list_song_album" >
+        <action
+            android:id="@+id/action_fragmentListSongAlbum_to_fragmentAddListSongAlbum"
+            app:destination="@id/fragmentAddListSongAlbum" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAddListSongAlbum"
+        android:name="com.example.enigma_music.screens.FragmentAddListSongAlbum"
+        android:label="fragment_add_list_song_album"
+        tools:layout="@layout/fragment_add_list_song_album" >
+        <action
+            android:id="@+id/action_fragmentAddListSongAlbum_to_fragmentListSongAlbum"
+            app:destination="@id/fragmentListSongAlbum" />
+    </fragment>
+</navigation>
